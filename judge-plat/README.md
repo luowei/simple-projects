@@ -11,4 +11,4 @@
 *截图:*
 
 ![judge-plat jschart](https://raw.github.com/luowei/simple-projects/master/judge-plat/doc/img/jschart_sample.png)
-![judge-plat content](https://raw.github.com/luowei/simple-projects/master/judge-plat/doc/img/jschart_sample.png)
+![judge-plat content](https://raw.github.com/luowei/simple-projects/master/judge-plat/doc/img/content.png)
