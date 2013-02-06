@@ -2,7 +2,8 @@
 
 一个spring mvc的轻量级web项目...
 
-*技术包含:
+**技术包含:**
+
 1.spring mvc
 2.spring jdbc
 3.boneCP 数据源连接池
