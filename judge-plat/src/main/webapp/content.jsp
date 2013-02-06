@@ -9,7 +9,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>石化产品现货估价平台 - 隆众石化网</title>
+<title>XX产品现货估价平台 - XXXX网</title>
 <link href="${ctx}/style/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="${ctx}/style/jquery.lz.1.2.js" charset="utf-8"></script>
 <script type="text/javascript" src="${ctx}/style/judge-plat.js" charset="utf-8"></script>
@@ -19,7 +19,7 @@
 <div class="main">
 <div class="m_left">
 <div class="product_list">
-<h2>石化产品</h2>
+<h2>XX产品</h2>
 <dl>
 <dt>油品</dt>
 <dd><a href1="${ctx}/l/p.do" href="javascript:void(0)" onclick="subform(this,1,'汽油','null')">汽油</a></dd>&nbsp;&nbsp;
@@ -93,7 +93,7 @@
 
 
 <div class="valuation2">
-<h2>石化产品现货估价</h2>
+<h2>XX产品现货估价</h2>
 <div class="area">
     <c:forEach var="area" items="${areaList}"><c:if test="${!fn:contains(area,'($)')}">
 	    <a href1="${ctx}/l/p.do" href="javascript:void(0)" onclick="subform(this,1,'${productName}','${area}')"
@@ -176,21 +176,21 @@
 
 <div class="footer">
   <p>
-		<a target="_blank" href="http://www.oilchem.net/about/">关于我们</a>
-		<a target="_blank" href="http://www.oilchem.net/about/chanpin.htm">服务项目</a>
-		<a target="_blank" href="http://news.oilchem.net/2012/cooperation/">广告服务</a>
-		<a target="_blank" href="http://www.oilchem.net/about2/%E5%85%A5%E7%BD%91%E9%A1%BB%E7%9F%A5.html">入网须知</a>
-		<a target="_blank" href="http://www.oilchem.net/about2/%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81.html">技术支持</a>
-		<a target="_blank" href="http://www.oilchem.net/about2/%E6%B3%95%E5%BE%8B%E5%A3%B0%E6%98%8E.html">法律声明</a>
-		<a target="_blank" href="http://www.oilchem.net/about/contact.htm">联系我们</a>
-		<a target="_blank" href="http://www.oilchem.net/about2/汇款方式2.html">汇款方式</a>
-		<a target="_blank" href="http://www.oilchem.net/about/link.htm">友情链接</a>
-		<a target="_blank" href="http://www.oilchem.net/s/隆众网络诊断工具.rar">网络诊断工具</a>
-		<a target="_blank" href="http://www.oilchem.net/about/anli/">建网案例</a>
-		<a target="_blank" href="http://news.oilchem.net/2012/hr/">人才招聘</a>
-		<a target="_blank" href="http://news.oilchem.net/2012/sitemap/">网站地图</a>
+		<a target="_blank" href="http://www.xxxx.net/about/">关于我们</a>
+		<a target="_blank" href="http://www.xxxx.net/about/chanpin.htm">服务项目</a>
+		<a target="_blank" href="http://news.xxxx.net/2012/cooperation/">广告服务</a>
+		<a target="_blank" href="http://www.xxxx.net/about2/%E5%85%A5%E7%BD%91%E9%A1%BB%E7%9F%A5.html">入网须知</a>
+		<a target="_blank" href="http://www.xxxx.net/about2/%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81.html">技术支持</a>
+		<a target="_blank" href="http://www.xxxx.net/about2/%E6%B3%95%E5%BE%8B%E5%A3%B0%E6%98%8E.html">法律声明</a>
+		<a target="_blank" href="http://www.xxxx.net/about/contact.htm">联系我们</a>
+		<a target="_blank" href="http://www.xxxx.net/about2/汇款方式2.html">汇款方式</a>
+		<a target="_blank" href="http://www.xxxx.net/about/link.htm">友情链接</a>
+		<a target="_blank" href="http://www.xxxx.net/s/XX网络诊断工具.rar">网络诊断工具</a>
+		<a target="_blank" href="http://www.xxxx.net/about/anli/">建网案例</a>
+		<a target="_blank" href="http://news.xxxx.net/2012/hr/">人才招聘</a>
+		<a target="_blank" href="http://news.xxxx.net/2012/sitemap/">网站地图</a>
 	</p>
-	<p>版权所有 隆众石化网 ICP 经营许可证编号为: 鲁B2-20080117 CopyRight ◎ 2011 oilchem.net All rights reserved.</p>
+	<p>版权所有 XXXX网 ICP 经营许可证编号为: </p>
 </div>
 
 

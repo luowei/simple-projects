@@ -8,13 +8,13 @@ b[0]&&b[0].ownerDocument||c);var h=[],i;for(var j=0,k;(k=a[j])!=null;j++){typeof
 function killWindowErrors() {return true;}
 //window.onerror = killWindowErrors;
 var userdomain = window.location.host;
-if(typeof(userdomain)=="undefined" || userdomain=="") {userdomain = "oilchem.net" ;}
-if(userdomain.indexOf("oilchem.net.cn")!=-1){
-	userdomain = "oilchem.net.cn" ;
-}else if(userdomain.indexOf("lzicp.com")!=-1) {
-	userdomain = "lzicp.com" ;
-}else if(userdomain.indexOf("oilchem.net")!=-1) {
-	userdomain = "oilchem.net" ;
+if(typeof(userdomain)=="undefined" || userdomain=="") {userdomain = "xxxx.net" ;}
+if(userdomain.indexOf("xxxx.net.cn")!=-1){
+	userdomain = "xxxx.net.cn" ;
+}else if(userdomain.indexOf("xxxx.com")!=-1) {
+	userdomain = "xxxx.com" ;
+}else if(userdomain.indexOf("xxxx.net")!=-1) {
+	userdomain = "xxxx.net" ;
 }
 
 function addHome()
@@ -138,7 +138,7 @@ if ( ReferrerGetCookie(cookieName)==null)
 	}
 }
 
-if(top.location.href!=null && top.location.href.indexOf("oilchem.net")==-1 && top.location.href.indexOf("lzicp.com")==-1 && top.location.href.indexOf("pcbi.net")==-1){
+if(top.location.href!=null && top.location.href.indexOf("xxxx.net")==-1 && top.location.href.indexOf("xxxx.com")==-1 && top.location.href.indexOf("pcbi.net")==-1){
 if(window != window.top){top.location.href = window.location.href;}
 }
 function IncludeJavaScript(jsFile)
@@ -177,7 +177,7 @@ if(typeof(LongZhong)!="object"){var LongZhong={}}
 LongZhong.$=function(i){if(!i){return null}
 return document.getElementById(i)};var LongZhongFlash=function(V,x,X,Z,v,z,i,c,I,l,o){var w=this;if(!document.createElement||!document.getElementById){return}
 w.id=x?x:'';var O=function(I,i){for(var l=0;l<I.length;l++){if(I[l]==i){return l}}
-return-1},C='8.0.42.0';if(O(['www.oilchem.net.cn','price.oilchem.net.cn'],document.domain)>-1){w.ver=C}else{w.ver=v?v:C}
+return-1},C='8.0.42.0';if(O(['www.xxxx.net.cn','price.xxxx.net.cn'],document.domain)>-1){w.ver=C}else{w.ver=v?v:C}
 w.ver=w.ver.replace(/\./g,',');w.__classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000";w.__codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version="+w.ver;w.width=X;w.height=Z;w.movie=V;w.src=w.movie;w.bgcolor=z?z:'';w.quality=c?c:"high";w.__pluginspage="http://www.macromedia.com/go/getflashplayer";w.__type="application/x-shockwave-flash";w.useExpressInstall=(typeof(i)=="boolean")?i:false;w.xir=I?I:window.location;w.redirectUrl=l?l:window.location;w.detectKey=(typeof(o)=="boolean")?o:true;w.escapeIs=false;w.__objAttrs={};w.__params={};w.__embedAttrs={};w.__flashVars=[];w.__flashVarsStr="";w.__forSetAttribute("id",w.id);w.__objAttrs["classid"]=w.__classid;w.__forSetAttribute("codebase",w.__codebase);w.__forSetAttribute("width",w.width);w.__forSetAttribute("height",w.height);w.__forSetAttribute("movie",w.movie);w.__forSetAttribute("quality",w.quality);w.__forSetAttribute("pluginspage",w.__pluginspage);w.__forSetAttribute("type",w.__type);w.__forSetAttribute("bgcolor",w.bgcolor)}
 LongZhongFlash.prototype={getFlashHtml:function(){var I=this,i='<object ';for(var l in I.__objAttrs){i+=l+'="'+I.__objAttrs[l]+'"'+' '}
 i+='>\n';for(var l in I.__params){i+='	<param name="'+l+'" value="'+I.__params[l]+'" \/>\n'}
@@ -213,8 +213,8 @@ function ShowLzADs(){
   }
 }
 var userdomain=document.domain;
-if(typeof(userdomain)=="undefined" || userdomain=="") {userdomain = "oilchem.net" ;}
-if(userdomain.indexOf("oilchem.net.cn")!=-1){userdomain = "oilchem.net.cn" ;}else if(userdomain.indexOf("oilchem.net")!=-1) {userdomain = "oilchem.net" ;}
+if(typeof(userdomain)=="undefined" || userdomain=="") {userdomain = "xxxx.net" ;}
+if(userdomain.indexOf("xxxx.net.cn")!=-1){userdomain = "xxxx.net.cn" ;}else if(userdomain.indexOf("xxxx.net")!=-1) {userdomain = "xxxx.net" ;}
 
 /* runonload */
 function runOnLoad(f) {

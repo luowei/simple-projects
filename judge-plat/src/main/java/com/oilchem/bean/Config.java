@@ -43,10 +43,10 @@ public class Config implements ServletContextListener {
     public static Integer MARQUEE_LISTSIZE = 8;
 
     //新闻图片domain
-    public static String NEWS_IMG_DOMAIN = "http://www.oilchem.net";
+    public static String NEWS_IMG_DOMAIN = "http://www.xxxx.net";
 
     //大宗商品新闻链接
-    public static String NEWS_URL = "http://www.lzicp.com/bulk/108_%s.html";
+    public static String NEWS_URL = "http://www.xxxx.com/bulk/108_%s.html";
 
     //头条新内容长度
     public static Integer HEADNEWS_CONTENT_LEN = 120;
