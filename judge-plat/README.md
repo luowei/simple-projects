@@ -4,13 +4,10 @@
 
 **技术包含:**
 
-1.spring mvc
-
-2.spring jdbc
-
-3.boneCP 数据源连接池
-
-4.json ,ajax ,jschart3.0
+1. spring mvc
+2. spring jdbc
+3. boneCP 数据源连接池
+4. json ,ajax ,jschart3.0
 
 
 *截图:*
