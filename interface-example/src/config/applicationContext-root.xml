@@ -4,7 +4,6 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:tx="http://www.springframework.org/schema/tx"
-       xmlns:jpa="http://www.springframework.org/schema/data/jpa"
        xmlns:repository="http://www.springframework.org/schema/data/repository"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
@@ -15,7 +14,7 @@
 		http://www.springframework.org/schema/tx
         http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 
-    <context:component-scan base-package="com.xxxx">
+    <context:component-scan base-package="net.xxxx">
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
 
@@ -34,14 +33,15 @@
         <property name="password" value="${jdbc.password}"/>
     </bean>
 
-    <bean id="pcdbDataSource" class="com.jolbox.bonecp.BoneCPDataSource" destroy-method="close">
+    <bean id="interfaceDataSource" class="com.jolbox.bonecp.BoneCPDataSource" destroy-method="close">
         <property name="driverClass" value="${pcdb.jdbc.driverClass}"/>
         <property name="jdbcUrl" value="${pcdb.jdbc.jdbcUrl}"/>
         <property name="username" value="${pcdb.jdbc.username}"/>
         <property name="password" value="${pcdb.jdbc.password}"/>
     </bean>
-    <bean id="pcdbJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
-         <property name="dataSource" ref="pcdbDataSource"/>
+
+    <bean id="interfaceJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="interfaceDataSource"/>
     </bean>
 
 </beans>
