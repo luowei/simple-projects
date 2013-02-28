@@ -11,4 +11,4 @@
 
 
 *详细参见*
-price_interface_api.mht
+doc/price_interface_api.doc
