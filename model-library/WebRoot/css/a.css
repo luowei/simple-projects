@@ -1,0 +1,17 @@
+a {text-transform:none;text-decoration:none;} 
+a:link {color:blue}	/*δ����ʱ*/
+a:hover{
+	color:#FFFFFF;
+	background-color: #00CC00;
+}	 /*�������ȥʱ*/
+a:active{
+	color:blue;
+	background-color: #FFCC00;
+} 	/*������ʱ*/
+a:visited{color:#6600FF;background-color: #FF9900;}	/*�ѷ���*/
+
+.past
+{
+	color:#FFFFFF;
+	background-color: #00CC00;
+}

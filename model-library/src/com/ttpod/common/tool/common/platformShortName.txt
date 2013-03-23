@@ -1,0 +1,7 @@
+symbian
+android
+meego
+ios
+bada
+blackBerry
+windows

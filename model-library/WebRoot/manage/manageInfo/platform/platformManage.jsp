@@ -1,0 +1,117 @@
+<%@ page language="java" pageEncoding="utf-8" %>
+<%@ include file="../../../commons/head.jsp" %>
+<%@ include file="../../../commons/js.jsp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>品牌管理</title>
+		<script type="text/javascript" charset="utf-8">
+			jQuery(function($){
+			$('#startDate').datepicker({
+					yearRange: '1900:2099', //取值范围.
+					showOn: 'both', //输入框和图片按钮都可以使用日历控件。
+					buttonImage: '${ctx}/js/date/calendar.gif', //日历控件的按钮
+					buttonImageOnly: true,
+					showButtonPanel: true
+				});	
+			$('#endDate').datepicker({
+					yearRange: '1900:2099', //取值范围.
+					showOn: 'both', //输入框和图片按钮都可以使用日历控件。
+					buttonImage: '${ctx}/js/date/calendar.gif', //日历控件的按钮
+					buttonImageOnly: true,
+					showButtonPanel: true
+				});	
+			//$('#userName').attr("value","aa");//填充内容	
+			
+		});	
+		
+		
+</script>
+	<script type="text/javascript">
+	function changeURLCode(name)
+	{
+	    var url="${ctx }/manage/manageInfo/phone/list.do?platformName="+name;
+	    window.open(url,"_blank","toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, copyhistory=yes, width=1280, height=1024"); 
+	
+	}
+	function changeCode()
+	{
+		var inputPlatformName=document.getElementById("inputPlatformName1").value;
+		inputPlatformName=encodeURI(inputPlatformName);
+		inputPlatformName=encodeURI(inputPlatformName);
+		document.getElementById("inputPlatformName2").value=inputPlatformName;	
+	}
+	</script>
+</head>
+<body>
+
+
+<!--根据条件查询手机平台信息  -->
+<form action="${ctx }/manage/manageInfo/platform/list.do" method="post" onsubmit="changeCode()">
+<table>
+	<tr>
+		<td>平台名:
+		<input type="text" name="tempkey" id="inputPlatformName1" width="150px" value="${PlatformName }" />
+		<input type="hidden" name="key" id="inputPlatformName2" width="150px"  />
+		</td>
+		<td>开始时间</td>
+		<td><input type="text" name="startDate" id="startDate" value="${startDate }"></td>
+		<td>结束时间</td>
+		<td><input type="text" name="endDate" id="endDate" value="${endDate }"></td>
+		<td><input type="submit" value="搜索"/>
+		<a href="${ctx }/manage/manageInfo/platform/addplatform.jsp">增加</a>
+	</tr>
+	<tr>
+	<td height="22" colspan="7">
+		 <img alt="搜索" src="${ctx }/manage/images/searchbg1.gif">		
+		 <c:forEach items="${filterList}" var="condition" varStatus="s">
+			<c:if test="${s.count!=1}">
+				+
+			</c:if>
+			${condition.displayName }<a href="${ctx }/manage/manageInfo/platform/list.do${condition.url}">删除</a>
+		 </c:forEach>
+	</td>
+	</tr>
+</table>
+</form> 
+<table class=gridView id=ctl00_ContentPlaceHolder2_GridView1 
+      style="WIDTH: 100%; BORDER-COLLAPSE: collapse" cellSpacing=0 rules=all 
+      border=0>
+  <tr>
+  	<th>序号</th>
+    <th >
+   		 平台ID
+   	<a href="${ctx }/manage/manageInfo/platform/list.do${order}id:asc">升序</a>
+    <a href="${ctx }/manage/manageInfo/platform/list.do${order}id:desc">降序</a>
+   	</th>
+    <th >平台名称
+   
+    </th>
+    <th >平台简称</th>
+	<th >平台状态</th>
+	<th >平台详情</th>
+	<th >添加时间
+	<a href="${ctx }/manage/manageInfo/platform/list.do${order }platformAddDate:asc">升序</a>
+    <a href="${ctx }/manage/manageInfo/platform/list.do${order }platformAddDate:desc">降序</a>		
+	</th>
+	<th >操作选项</th>
+  </tr>
+<c:forEach items="${platformList}" var="platform" varStatus="s">
+  <tr>
+  	<td>${index+s.index}</td>
+    <td>${platform.id}</td>
+    <td><a href="#" onclick="changeURLCode('${platform.platformName}')" >${platform.platformName}</a></td>
+    <td>${platform.platformShortName}</td>
+	<td>${platform.platformStatus}</td>
+	<td>${platform.platformInfo}</td>
+	<td>${platform.platformAddDate}</td>
+	<td><a class=cmdField href="${ctx }/manage/manageInfo/platform/edit/${platform.id}.do">编辑</a>|
+	<a class=cmdField href="javascript:if(confirm('确实要删除吗?'))location.href='${ctx }/manage/manageInfo/platform/delete/${platform.id}.do';">删除</A>
+    </td>
+  </tr>
+  </c:forEach>
+</table>
+ ${tag}
+ </body>
+ </html>
