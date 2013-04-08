@@ -11,14 +11,14 @@
 		http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
     <context:annotation-config/>
-    <context:component-scan base-package="net.rootls.view" />
+    <context:component-scan base-package="com.rootls.view" />
 
     <mvc:annotation-driven/>
 
     <mvc:default-servlet-handler/>
 
     <mvc:interceptors>
-        <bean class="net.rootls.view.interceptor.UserInterceptor" />
+        <bean class="com.rootls.view.interceptor.UserInterceptor" />
     </mvc:interceptors>
 
 

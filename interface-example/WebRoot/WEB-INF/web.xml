@@ -16,7 +16,7 @@
 
     <!-- config listener -->
     <listener>
-        <listener-class>net.rootls.bean.Config</listener-class>
+        <listener-class>com.rootls.bean.Config</listener-class>
     </listener>
 
     <filter>

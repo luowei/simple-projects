@@ -11,7 +11,7 @@
 	<filter>
 		<filter-name>hibernateFilter</filter-name>
 		<filter-class>
-			com.ttpod.common.view.filter.CustomHibernateSessionFilter</filter-class>
+            com.rootls.common.view.filter.CustomHibernateSessionFilter</filter-class>
 		<!-- 是否单个Session-->
 		<init-param>
 			<param-name>singleSession</param-name>

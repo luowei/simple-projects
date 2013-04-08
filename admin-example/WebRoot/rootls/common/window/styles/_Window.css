@@ -1,0 +1,191 @@
+.MODAL
+{
+	background-color:#333435;
+	filter:alpha(opacity=5);
+	opacity:0.05;
+}
+
+/* ---- NOKIA 样式 ---- */
+.NOKIA
+{
+	font-size: 1px;
+}
+
+/* 边框样式 */
+.NOKIA .LEFT_TOP
+{
+	/* 左上：请不要定义padding/margin/border/top/right/bottom/left属性 */
+	width: 150px;
+	height: 42px;
+	background-image:url(../images/nokia/LEFT_TOP.gif);
+	background-repeat: no-repeat;
+}
+.NOKIA .TOP
+{
+	/* 上边：请不要定义padding/margin/border/top/right/bottom/left属性 */
+	height: 42px;
+	background-image: url(../images/nokia/TOP.gif);
+	background-repeat: repeat-x;
+}
+.NOKIA .RIGHT_TOP
+{
+	/* 右上：请不要定义padding/margin/border/top/right/bottom/left属性 */
+	width: 37px;
+	height: 42px;
+	background-image: url(../images/nokia/RIGHT_TOP.gif);
+	background-repeat: no-repeat;
+}
+.NOKIA .RIGHT
+{
+	/* 右边：请不要定义padding/margin/border/top/right/bottom/left属性 */
+	width: 12px;
+	background-image: url(../images/nokia/RIGHT.gif);
+	background-repeat: repeat-y;
+}
+.NOKIA .RIGHT_BOTTOM
+{
+	/* 右下：请不要定义padding/margin/border/top/right/bottom/left属性 */
+	width: 12px;
+	height: 12px;
+	background-image: url(../images/nokia/RIGHT_BOTTOM.gif);
+	background-repeat: no-repeat;
+}
+.NOKIA .RIGHT_BOTTOM_BY_BUTTON
+{
+	/* 右下(有按钮时)：请不要定义padding/margin/border/top/right/bottom/left属性 */
+	width: 12px;
+	height: 36px;
+	background-image: url(../images/nokia/RIGHT_BOTTOM_BY_BUTTON.gif);
+	background-repeat: no-repeat;
+}
+.NOKIA .BOTTOM
+{
+	/* 下边：请不要定义padding/margin/border/top/right/bottom/left属性 */
+	height: 12px;
+	background-image: url(../images/nokia/BOTTOM.gif);
+	background-repeat: repeat-x;
+}
+.NOKIA .BOTTOM_BY_BUTTON
+{
+	/* 下边(有按钮时)：请不要定义padding/margin/border/top/right/bottom/left属性 */
+	height: 36px;
+	background-image: url(../images/nokia/BOTTOM_BY_BUTTON.gif);
+	background-repeat: repeat-x;
+}
+.NOKIA .LEFT_BOTTOM
+{
+	/* 左下：请不要定义padding/margin/border/top/right/bottom/left属性 */
+	width: 12px;
+	height: 12px;
+	background-image: url(../images/nokia/LEFT_BOTTOM.gif);
+	background-repeat: no-repeat;
+}
+.NOKIA .LEFT_BOTTOM_BY_BUTTON
+{
+	/* 左下(有按钮时)：请不要定义padding/margin/border/top/right/bottom/left属性 */
+	width: 12px;
+	height: 36px;
+	background-image: url(../images/nokia/LEFT_BOTTOM_BY_BUTTON.gif);
+	background-repeat: no-repeat;
+}
+.NOKIA .LEFT
+{
+	/* 请不要定义padding/margin/border/top/right/bottom/left属性 */
+	width: 12px;
+	background-image: url(../images/nokia/LEFT.gif);
+	background-repeat: repeat-y;
+}
+
+/* 功能区样式 */
+.NOKIA .RESIZE
+{
+	width: 12px;
+	height: 12px;
+	right: 0px;
+	bottom: 0px;
+}
+.NOKIA .CLOSE
+{
+	width: 19px;
+	height: 18px;
+	right: 9px;
+	top: 6px;
+	cursor:default;
+}
+
+/* 逻辑区样式 */
+.NOKIA .CONTENT
+{
+	/* 请不要定义padding/margin属性 */
+	/* 请定义left = -(border-left),top = -(border-top) */
+	left: 0px;
+	top: 0px;
+	background-color:#ffffff;
+}
+.NOKIA .CONTENT .FORM
+{
+	font-size: 14px;
+	margin: 0px;
+	padding: 12px;
+}
+.NOKIA .TITLE
+{
+	/* 请不要定义margin属性 */
+	padding:8px 30px 0px 12px;
+	font-size:14px;
+	font-weight:bold;
+	text-align: left;
+	color: #ffffff;
+	height: 16px;
+	line-height: 16px;
+	overflow: hidden;
+}
+.NOKIA .BUTTON
+{
+	/* 请不要定义margin属性 (暂不支持:width:100%;bottom:0px;) */
+	padding: 0px 30px 5px 0px;
+	text-align:right;
+}
+.NOKIA .BUTTON button
+{
+	width:40px;
+	height:30px;
+	border:0px;
+	padding:0px;
+	background-repeat:no-repeat;
+}
+.NOKIA .BUTTON .DISABLED
+{
+	filter:alpha(opacity=36);
+	opacity:0.36;
+}
+.NOKIA .BUTTON .DISABLED2
+{
+	display: none;
+}
+
+/* 各种按钮样式 */
+.NOKIA .BUTTON .BACK
+{
+	background-image:url(../images/nokia/BACK.gif);
+}
+.NOKIA .BUTTON .NEXT
+{
+	background-image:url(../images/nokia/NEXT.gif);
+}
+.NOKIA .BUTTON .OK
+{
+	background-image:url(../images/nokia/OK.gif);
+}
+.NOKIA .BUTTON .CANCEL
+{
+	background-image:url(../images/nokia/CANCEL.gif);
+}
+.NOKIA .BUTTON .HELP
+{
+	position:absolute;
+	left:30px;
+	top: 0px;
+	background-image:url(../images/nokia/HELP.gif);
+}
+/* ---- NOKIA 样式 ---- */

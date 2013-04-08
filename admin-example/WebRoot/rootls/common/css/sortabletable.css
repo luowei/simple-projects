@@ -1,0 +1,45 @@
+.sort-table {
+    font:		Icon;
+    BORDER-RIGHT: #183789 1px solid; BORDER-TOP: #183789 1px solid; BORDER-LEFT: #183789 1px solid; WIDTH: 98%; BORDER-BOTTOM: #183789 1px solid; BACKGROUND-COLOR: #ffffff
+}
+
+.sort-table thead {
+    background:	ButtonFace;
+}
+
+.sort-table td {
+    padding:	2px 5px;
+}
+
+.sort-table thead td {
+    TEXT-ALIGN:center;
+    height: 24px;FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(../images/manage/admin_bg_1.gif); COLOR: white; BACKGROUND-COLOR: #4455aa;
+    CURSOR:hand;
+}
+
+.sort-table thead td:active {
+    height: 24px;FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(../images/manage/admin_bg_1.gif); COLOR: white; BACKGROUND-COLOR: #4455aa
+padding:		3px 4px 1px 6px;
+}
+
+.sort-table thead td[_sortType=None]:active {
+    height: 24px;FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(../images/manage/admin_bg_1.gif); COLOR: white; BACKGROUND-COLOR: #4455aa
+padding:		2px 5px;
+}
+
+.sort-arrow {
+    width:					11px;
+    height:					11px;
+    background-position:	center center;
+    background-repeat:		no-repeat;
+    margin:					0 2px;
+}
+
+.sort-arrow.descending {
+    background-image:		url("../images/downsimple.png");
+
+}
+
+.sort-arrow.ascending {
+    background-image:		url("../images/upsimple.png");
+}

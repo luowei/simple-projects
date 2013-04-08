@@ -44,16 +44,16 @@
 		<!--主键Bean类		-->
 		<property name="annotatedClasses">
 			<list>
-				<value>com.ttpod.common.model.UserInfo</value>
-				<value>com.ttpod.common.model.Role</value>
-				<value>com.ttpod.common.model.Action</value>
-				<value>com.ttpod.common.model.Module</value>
-				<value>com.ttpod.common.model.Menu</value>
-				<value>com.ttpod.common.model.Platform</value>
-				<value>com.ttpod.common.model.Phonebrand</value>
-				<value>com.ttpod.common.model.Phone</value>
-				<value>com.ttpod.common.model.TPhonebrand</value>
-				<value>com.ttpod.common.model.TPhone</value>
+				<value>com.rootls.common.model.UserInfo</value>
+				<value>com.rootls.common.model.Role</value>
+				<value>com.rootls.common.model.Action</value>
+				<value>com.rootls.common.model.Module</value>
+				<value>com.rootls.common.model.Menu</value>
+				<value>com.rootls.common.model.Platform</value>
+				<value>com.rootls.common.model.Phonebrand</value>
+				<value>com.rootls.common.model.Phone</value>
+				<value>com.rootls.common.model.TPhonebrand</value>
+				<value>com.rootls.common.model.TPhone</value>
 			</list>
 		</property>
 	</bean>
@@ -82,7 +82,7 @@
 	<!-- 那些类的哪些方法参与事务 -->
 	<aop:config>
 		<aop:pointcut id="allServiceMethod"
-			expression="execution(* com.ttpod.**.service.*.*(..))" />
+			expression="execution(* com.rootls.**.service.*.*(..))" />
 		<aop:advisor pointcut-ref="allServiceMethod" advice-ref="txAdvice" />
 	</aop:config>
 

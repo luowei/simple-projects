@@ -1,0 +1,279 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td{margin:0;padding:0}
+body {
+    background:#CAD7F7;
+    font-size: 12px;
+    margin-top:0px;
+    padding:0px;
+    SCROLLBAR-FACE-COLOR: #799AE1; SCROLLBAR-HIGHLIGHT-COLOR: #799AE1;
+    SCROLLBAR-SHADOW-COLOR: #799AE1; SCROLLBAR-DARKSHADOW-COLOR: #799AE1;
+    SCROLLBAR-3DLIGHT-COLOR: #799AE1; SCROLLBAR-ARROW-COLOR: #FFFFFF;
+    SCROLLBAR-TRACK-COLOR: #AABFEC;
+}
+bodybak1 {
+    background-color:#CAD7F7;
+    font-size: 12px;
+    margin:0;
+    padding:0;
+}
+
+TD {
+    FONT-SIZE: 12px;height: 22px;
+}
+INPUT {
+    BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 12px; BORDER-BOTTOM-WIDTH: 1px; BORDER-RIGHT-WIDTH: 1px
+}
+TEXTAREA {
+    BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 12px; BORDER-BOTTOM-WIDTH: 1px; BORDER-RIGHT-WIDTH: 1px
+}
+SELECT {
+    BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 12px; BORDER-BOTTOM-WIDTH: 1px; BORDER-RIGHT-WIDTH: 1px
+}
+SPAN {
+    FONT-SIZE: 12px; POSITION: static
+}
+A:link {
+    COLOR: #000000; TEXT-DECORATION: none
+}
+A:visited {
+    COLOR: #000000; TEXT-DECORATION: none
+}
+a:hover  { color:#428EFF;text-decoration:underline; }
+A.highlight:link {
+    COLOR: red; TEXT-DECORATION: none
+}
+A.highlight:visited {
+    COLOR: red; TEXT-DECORATION: none
+}
+A.highlight:hover {
+    COLOR: red
+}
+A.thisclass:link {
+    FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.thisclass:visited {
+    FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.thisclass:hover {
+    FONT-WEIGHT: bold
+}
+A.navlink:link {
+    COLOR: #000000; TEXT-DECORATION: none
+}
+A.navlink:visited {
+    COLOR: #000000; TEXT-DECORATION: none
+}
+A.navlink:hover {
+    COLOR: #003399; TEXT-DECORATION: none
+}
+.twidth {
+    WIDTH: 760px
+}
+.content {
+    FONT-SIZE: 14px; MARGIN: 5px 20px; LINE-HEIGHT: 140%; FONT-FAMILY: Tahoma,ËÎÌå
+}
+.aTitle {
+    FONT-WEIGHT: bold; FONT-SIZE: 15px
+}
+TD.webHeaderBackgroundAlternate {
+    BACKGROUND-IMAGE: url(../images/manage/admin_top_bg.gif); COLOR: #000000; BACKGROUND-COLOR: #799ae1
+}
+#TableTitleLink A:link {
+    COLOR: #ffffff; TEXT-DECORATION: none
+}
+#TableTitleLink A:visited {
+    COLOR: #ffffff; TEXT-DECORATION: none
+}
+#TableTitleLink A:active {
+    COLOR: #ffffff; TEXT-DECORATION: none
+}
+#TableTitleLink A:hover {
+    COLOR: #ffffff; TEXT-DECORATION: underline
+}
+TD.webRow {
+    PADDING-RIGHT: 3px; PADDING-LEFT: 3px; BACKGROUND: #F1F3F5; PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+TH {
+    TEXT-ALIGN:center;height: 24px;FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(../images/manage/admin_bg_1.gif); COLOR: white; BACKGROUND-COLOR: #4455aa
+}
+TD.bodytitle {
+    BACKGROUND-IMAGE: url(../images/manage/admin_bg_2.gif)
+}
+TD.bodytitle1 {
+    BACKGROUND-IMAGE: url(../images/manage/admin_bg_3.gif)
+}
+TD.tablebody1 {
+    PADDING-RIGHT: 3px; PADDING-LEFT: 3px; BACKGROUND: #bebbdb; PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+TD.webRowHighlight {
+    PADDING-RIGHT: 3px; PADDING-LEFT: 3px; BACKGROUND: #E4EDF9; PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+.tableBorder {
+    BORDER-RIGHT: #183789 1px solid; BORDER-TOP: #183789 1px solid; BORDER-LEFT: #183789 1px solid; WIDTH: 98%; BORDER-BOTTOM: #183789 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.tableBorder1 {WIDTH: 98%; }
+.helplink {
+    FONT: 10px verdana,arial,helvetica,sans-serif; CURSOR: help; TEXT-DECORATION: none
+}
+.copyright {
+    PADDING-RIGHT: 1px; BORDER-TOP: #6595d6 1px dashed; PADDING-LEFT: 1px; PADDING-BOTTOM: 1px; FONT: 11px verdana,arial,helvetica,sans-serif; COLOR: #4455aa; PADDING-TOP: 1px; TEXT-DECORATION: none
+}
+TD.tdclass0 {
+    height: 22px;PADDING-RIGHT: 3px; PADDING-LEFT: 3px; BACKGROUND: #E4EDF9; PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+TD.tdclass1 {
+    height: 22px;PADDING-RIGHT: 3px; PADDING-LEFT: 3px; BACKGROUND: #F1F3F5; PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+.tdclass0 {
+    background-color: #E4EDF9;
+    height: 22px;
+    font-family:"Verdana", "Arial", "ËÎÌå";
+    font-size: 12px;
+    color:#000000;
+}
+.tdclass1 {
+    background-color: #F1F3F5;
+    height: 22px;
+    font-family:"Verdana", "Arial", "ËÎÌå";
+    font-size: 12px;
+    color:#000000;
+}
+TD.tdclassRed {
+    height: 22px;PADDING-RIGHT: 3px; PADDING-LEFT: 3px; BACKGROUND:#FFCC33; PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+.tdclassRed {
+    background-color: #FFCC33;
+    height: 22px;
+    font-family:"Verdana", "Arial", "ËÎÌå";
+    font-size: 12px;
+    color:#000000;
+}
+TD.tdclassGreen {
+    height: 22px;PADDING-RIGHT: 3px; PADDING-LEFT: 3px; BACKGROUND:#00CC33; PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+.tdclassGreen {
+    background-color: #00CC33;
+    height: 22px;
+    font-family:"Verdana", "Arial", "ËÎÌå";
+    font-size: 12px;
+    color:#000000;
+}
+TD.tdclass2 {
+    height: 22px;PADDING-RIGHT: 3px; PADDING-LEFT: 3px; BACKGROUND: #E4EDF9; PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+.tdclass2 {
+    background-color: #C9DCCB;
+    height: 22px;
+    font-family:"Verdana", "Arial", "ËÎÌå";
+    font-size: 12px;
+    color:#000000;
+}
+TD.tdclass3 {
+    height: 22px;PADDING-RIGHT: 3px; PADDING-LEFT: 3px; BACKGROUND: #E4EDF9; PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+.tdclass3 {
+    background-color: #C2C1DB;
+    height: 22px;
+    font-family:"Verdana", "Arial", "ËÎÌå";
+    font-size: 12px;
+    color:#000000;
+}
+TD.tdclass4 {
+    height: 22px;PADDING-RIGHT: 3px; PADDING-LEFT: 3px; BACKGROUND: #E4EDF9; PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+.tdclass4 {
+    background-color: #88ADC4;
+    height: 22px;
+    font-family:"Verdana", "Arial", "ËÎÌå";
+    font-size: 12px;
+    color:#000000;
+}
+
+
+
+
+.textfield {
+    BORDER-RIGHT: 0px; PADDING-RIGHT: 1px; BORDER-TOP: 0px; PADDING-LEFT: 1px; FONT-SIZE: 12pt; BACKGROUND: #f1f1f1; PADDING-BOTTOM: 1px; BORDER-LEFT: 0px; CURSOR: text; COLOR: #333333; PADDING-TOP: 1px; BORDER-BOTTOM: #333333 1px solid; FONT-FAMILY: "MS Shell Dlg", "Tahoma", "ËÎÌå"; HEIGHT: 20px
+}
+.button1 {
+    BORDER-RIGHT: #665b8e 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 1px; FONT-SIZE: 12px; BACKGROUND: #cccccc; PADDING-BOTTOM: 1px; BORDER-LEFT: #ffffff 1px solid; CURSOR: hand; COLOR: #333333; PADDING-TOP: 1px; BORDER-BOTTOM: #665b8e 1px solid; FONT-FAMILY: "MS Shell Dlg", "Tahoma", "ËÎÌå"; HEIGHT: 20px
+}
+IMG{
+    border: 0px
+}
+
+/* a class for all Tigra Hints boxes, TD object */
+.hintsClass
+{text-align: center; font-family: Verdana, Arial, Helvetica;}
+/* this class is used by Tigra Hints wrappers */
+.row
+{background: #FFFFDD;filter:Alpha(Opacity=90);}
+.tooltipbg
+{background: black; filter:Alpha(Opacity=90);}
+.menuskin {
+    BORDER: #666666 1px solid; VISIBILITY: hidden; FONT: 12px Verdana;
+    POSITION: absolute;
+    BACKGROUND-COLOR:#EFEFEF;
+    background-image:url("skins/default/dvmenubg3.gif");
+    background-repeat : repeat-y;
+}
+.menuskin A {
+    PADDING-RIGHT: 10px; PADDING-LEFT: 25px; COLOR: black; TEXT-DECORATION: none; behavior:url(inc/noline.htc);
+}
+#mouseoverstyle {
+    BACKGROUND-COLOR: #C9D5E7; margin:2px; padding:0px; border:#597DB5 1px solid;
+}
+#mouseoverstyle A {
+    COLOR: black
+}
+.menuitems{
+    margin:2px;padding:1px;word-break:keep-all;
+}
+
+.ac_results {
+    padding: 0px;
+    border: 1px solid black;
+    background-color: white;
+    overflow: hidden;
+    z-index: 99999;
+}
+
+.ac_results ul {
+    width: 100%;
+    list-style-position: outside;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ac_results li {
+    margin: 0px;
+    padding: 2px 5px;
+    cursor: default;
+    display: block;
+    /*
+    if width will be 100% horizontal scrollbar will apear
+    when scroll mode will be used
+    */
+    /*width: 100%;*/
+    font: menu;
+    font-size: 12px;
+    /*
+    it is very important, if line-height not setted or setted
+    in relative units scroll will be broken in firefox
+    */
+    line-height: 16px;
+    overflow: hidden;
+}
+
+.ac_loading {
+    background: white url('/js/indicator.gif') right center no-repeat;
+}
+
+.ac_odd {
+    background-color: #eee;
+}
+
+.ac_over {
+    background-color: #799AE1;
+    color: white;
+}
