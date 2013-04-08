@@ -1,4 +1,4 @@
-#admin-example
+#price-example
 
 一个spring mvc的轻量级web项目...
 
