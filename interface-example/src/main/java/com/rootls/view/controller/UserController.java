@@ -27,8 +27,7 @@ import static com.rootls.utils.Md5Util.generatePassword;
  * Time: 下午2:52
  * To change this template use File | Settings | File Templates.
  */
-@Controller
-@NeedLogin
+@Controller @NeedLogin
 @SessionAttributes("user")
 @RequestMapping("/user")
 public class UserController {

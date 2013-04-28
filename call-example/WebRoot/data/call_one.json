@@ -1,0 +1,17 @@
+﻿{"Data": [
+    {
+        "CallDateTime": "2013-04-15 14:47:55",
+        "CallDirect": 2,
+        "CallIndex": 1,
+        "CallResult": -1,
+        "CallTimeLen": 9,
+        "ConnectDateTime": "",
+        "ConnectTimeLen": 0,
+        "DisconnectTime": "2013-04-15 14:48:04",
+        "ExtCode": "813",
+        "ID": 82605,
+        "OtherCode": "013855027779",
+        "RecordFile": "",
+        "SessionID": "201304151447557230"
+    }
+], "ErrorCode": 0, "ErrorString": ""}
