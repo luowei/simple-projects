@@ -1,0 +1,313 @@
+/*
+ * AeroWindow - jQuery Plugin (v3.5)
+ * Copyright 2010, Christian Goldbach
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * 
+ * Project Website:
+ * http://www.soyos.net/aerowindow-jquery.html
+ * http://www.soyos.net
+ *
+ *
+ *
+ * Requires Easing Plugin for Window Animations:
+ * jQuery Easing v1.3 - http://gsgd.co.uk/sandbox/jquery/easing/
+ *
+ */
+ 
+ 
+/*-----------------------------------------------------------------------------
+AeroWindow Style - Regular
+-----------------------------------------------------------------------------*/
+.AeroWindow {
+  position: absolute;
+  background: url(../images/WindowsAeroStyle/inactive/lines.png);
+  background-position: 0px -100px;
+  z-index: 10;
+  overflow: hidden;
+  display: block;  
+}
+
+
+.AeroWindow .table-tl {
+  background: url(../images/WindowsAeroStyle/inactive/tl.png);
+  min-width: 9px;
+  height: 9px;
+}
+.AeroWindow .table-tm {
+  background: url(../images/WindowsAeroStyle/inactive/tm.png);
+}
+.AeroWindow .table-tr {
+  background: url(../images/WindowsAeroStyle/inactive/tr.png);
+  min-width: 9px;
+  height: 9px;
+}
+.AeroWindow .table-rm {
+  background: url(../images/WindowsAeroStyle/inactive/rm.png);
+}
+.AeroWindow .table-bl {
+  background: url(../images/WindowsAeroStyle/inactive/bl.png);
+  width: 9px;
+  height: 9px;
+}
+.AeroWindow .table-bm {
+  background: url(../images/WindowsAeroStyle/inactive/bm.png);
+}
+.AeroWindow .table-br {
+  background: url(../images/WindowsAeroStyle/inactive/br.png);
+  width: 9px;
+  height: 9px;
+}
+.AeroWindow .table-lm {
+  background: url(../images/WindowsAeroStyle/inactive/lm.png);
+}
+.AeroWindow .table-mm {
+  background: url(../images/WindowsAeroStyle/inactive/mm.png);  
+}
+/*-----------------------------------------------------------------------------
+AeroWindow Style - Active
+-----------------------------------------------------------------------------*/
+.AeroWindow.active {
+  position: absolute;
+  background: url(../images/WindowsAeroStyle/active/lines.png) 0px -400px;
+  z-index: 100;
+}
+.AeroWindow.active .table-tl {
+  background: url(../images/WindowsAeroStyle/active/tl.png);
+  width: 9px;
+  height: 9px;
+}
+.AeroWindow.active .table-tm {
+  background: url(../images/WindowsAeroStyle/active/tm.png);
+}
+.AeroWindow.active .table-tr {
+  background: url(../images/WindowsAeroStyle/active/tr.png);
+  width: 9px;
+  height: 9px;
+}
+.AeroWindow.active .table-rm {
+  background: url(../images/WindowsAeroStyle/active/rm.png);
+}
+.AeroWindow.active .table-bl {
+  background: url(../images/WindowsAeroStyle/active/bl.png);
+  width: 9px;
+  height: 9px;
+}
+.AeroWindow.active .table-bm {
+  background: url(../images/WindowsAeroStyle/active/bm.png);
+}
+.AeroWindow.active .table-br {
+  background: url(../images/WindowsAeroStyle/active/br.png);
+  width: 9px;
+  height: 9px;
+}
+.AeroWindow.active .table-lm {
+  background: url(../images/WindowsAeroStyle/active/lm.png);
+}
+.AeroWindow.active .table-mm {
+  background: url(../images/WindowsAeroStyle/active/mm.png);
+}     
+.AeroWindow .table-mm-container {
+  margin-top: 30px;
+  border: 1px solid #b0c6e4;
+}
+.AeroWindow .table-mm-content {
+  font-family: "Tahoma", "Verdana", "Arial", "sans-serif","Microsoft YaHei";
+  padding: 5px;
+  border: 1px solid #000;
+  background-color: #fff;
+  font-size:12px;
+  overflow: auto;
+  position: relative;
+}  
+/*-----------------------------------------------------------------------------
+AeroWindow Resizing
+-----------------------------------------------------------------------------*/
+.AeroWindow .ui-resizable-e {
+  right: 0px!important;
+}
+.AeroWindow .ui-resizable-s {
+  bottom: 0px!important;
+}
+.AeroWindow .ui-icon {
+  height:24px;
+  width:24px;
+}
+.AeroWindow .ui-icon-gripsmall-diagonal-se  {
+  background-position:-76px -220px;
+}
+.AeroWindow .ui-resizable-handle {
+}
+
+.AeroWindow .table-mm-container .ui-resizable-e {
+	cursor: e-resize; width: 7px; right: -5px; top: 0; height: 100%;
+}
+.AeroWindow .table-mm-container .ui-resizable-s {
+	cursor: s-resize; height: 7px; width: 100%; bottom: -5px; left: 0;
+}
+
+.AeroWindow .table-mm-container .ui-icon {
+  height:16px;
+  width:16px;
+}
+.AeroWindow .table-mm-container .ui-icon-gripsmall-diagonal-se  {
+  { background-position: -64px -224px; }
+}
+/*-----------------------------------------------------------------------------
+AeroWindow Title
+-----------------------------------------------------------------------------*/
+.AeroWindow .title {
+  position: absolute; 
+  margin: 10px 0px 0px 5px;
+  text-shadow: #fff 0px 0px 5px; 
+  color: #333;
+  font-family: "Tahoma", "Verdana", "Arial", "sans-serif","Microsoft YaHei";
+  padding-right: 5px;
+  font-size: 14px;
+  left: 5px;
+  cursor: default;
+  top: -2px;
+}
+
+
+/*-----------------------------------------------------------------------------
+Button Area
+-----------------------------------------------------------------------------*/
+.AeroWindow .aerobuttons  {
+  position: relative;
+  float: right;
+  top: -6px;
+}        
+.AeroWindow .aerobuttons  a{
+  text-decoration: none;
+  cursor: default;  
+}  
+/*-----------------------------------------------------------------------------
+Buttons Regular Window
+-----------------------------------------------------------------------------*/
+.AeroWindow .aerobuttons .win-min-btn {
+  width: 27px;
+  height: 19px;
+  display: block;
+  float: left;
+  background: url(../images/WindowsAeroStyle/inactive/btn-min.png);
+}      
+.AeroWindow .aerobuttons .win-max-btn {
+  width: 26px;
+  height: 19px;
+  display: block;
+  float: left;
+  background: url(../images/WindowsAeroStyle/inactive/btn-max.png);
+}      
+.AeroWindow .aerobuttons .win-reg-btn {
+  width: 26px;
+  height: 19px;
+  display: block;
+  float: left;
+  background: url(../images/WindowsAeroStyle/inactive/btn-reg.png);
+}      
+.AeroWindow .aerobuttons .win-close-btn {
+  width: 46px;
+  height: 19px;
+  float: left;
+  display: block;
+  background: url(../images/WindowsAeroStyle/inactive/btn-close.png);
+}  
+.AeroWindow .aerobuttons .win-btn-leftedge {
+  width: 2px;
+  height: 19px;
+  float: left;
+  background: url(../images/WindowsAeroStyle/left.png);
+}            
+.AeroWindow .aerobuttons .win-btn-rightedge {
+  width: 2px;
+  height: 19px;
+  float: left;
+  background: url(../images/WindowsAeroStyle/right.png);
+}            
+.AeroWindow .aerobuttons .win-btn-spacer {
+  width: 1px;
+  height: 19px;
+  float: left;
+  background: url(../images/WindowsAeroStyle/spacer.png);
+}            
+.AeroWindow .aerobuttons .WinBtnSet {
+  float: left;
+}
+
+/*-----------------------------------------------------------------------------
+Buttons Active Window
+-----------------------------------------------------------------------------*/
+.AeroWindow.active .aerobuttons .win-min-btn {
+  background: url(../images/WindowsAeroStyle/active/btn-min.png);
+}      
+.AeroWindow.active .aerobuttons .win-max-btn {
+  background: url(../images/WindowsAeroStyle/active/btn-max.png);
+}      
+.AeroWindow.active .aerobuttons .win-reg-btn {
+  background: url(../images/WindowsAeroStyle/active/btn-reg.png);
+}      
+.AeroWindow.active .aerobuttons .win-close-btn {
+  background: url(../images/WindowsAeroStyle/active/btn-close.png);
+}            
+
+/*-----------------------------------------------------------------------------
+Buttons Hover Effects
+-----------------------------------------------------------------------------*/
+.AeroWindow .aerobuttons .win-min-btn:hover {
+  background: url(../images/WindowsAeroStyle/hover/btn-min.png);
+}      
+.AeroWindow .aerobuttons .win-max-btn:hover {
+  background: url(../images/WindowsAeroStyle/hover/btn-max.png);
+}      
+.AeroWindow .aerobuttons .win-reg-btn:hover {
+  background: url(../images/WindowsAeroStyle/hover/btn-reg.png);
+}      
+.AeroWindow .aerobuttons .win-close-btn:hover {
+  background: url(../images/WindowsAeroStyle/hover/btn-close.png);
+}            
+
+
+/*-----------------------------------------------------------------------------
+DEMO CONTENT 
+
+.AeroWindow  .table-mm-content p {
+  color: #222;
+  margin: 0px;
+  padding: 5px;
+  font-family: "Tahoma", "Verdana", "Arial", "sans-serif","Microsoft YaHei";
+  font-size: 12px;
+}
+.AeroWindow  .table-mm-content h1 {
+  margin: 0px;
+  padding: 5px;
+  font-family: "Tahoma", "Verdana", "Arial", "sans-serif","Microsoft YaHei";
+  font-size: 24px;
+}
+.AeroWindow  .table-mm-content a {
+  margin: 0px;
+  padding: 5px;
+  font-family: "Tahoma", "Verdana", "Arial", "sans-serif","Microsoft YaHei";
+  font-size: 12px;
+}
+.AeroWindow  .table-mm-content ul {
+  color: #222;
+  margin: 10px 0px 20px 22px;
+  padding: 0px;
+  font-family: "Tahoma", "Verdana", "Arial", "sans-serif","Microsoft YaHei";
+  font-size: 12px;
+}
+-----------------------------------------------------------------------------*/
+.iframeHelper {
+  display: none; 
+  height: 100%; 
+  width: 100%; 
+  position: absolute; 
+  left: 0px; 
+  top: 0px; 
+  background: url(../images/WindowsAeroStyle/empty.gif);
+  z-index: 0;
+}
+
+
+
+
