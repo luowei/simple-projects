@@ -32,16 +32,19 @@ public class UserCache{
         }
 
         try {
-            String sql = " select id,[name],cname from admin ";
-            JdbcTemplate jdbcTemplate = new JdbcTemplate(BasicDataSource.class.cast(getCurrentWebApplicationContext().getBean("pcdbdataSource")));
+            String sql = " select * from Lz_Admin ";
+            JdbcTemplate jdbcTemplate = new JdbcTemplate(BasicDataSource.class.cast(getCurrentWebApplicationContext().getBean("dataSource")));
             List<UidName> uidNameList = jdbcTemplate.query(sql, new RowMapper<UidName>() {
                 @Override
                 public UidName mapRow(ResultSet rs, int i) throws SQLException {
-                    return new UidName(
+                    UidName uidName = new UidName(
                             rs.getInt("id"),
-                            rs.getString("name"),
-                            rs.getString("cname")
+                            rs.getString("username"),
+                            rs.getString("truename")
                     );
+                    uidName.setQPName(rs.getString("name_jp"));
+                    uidName.setJPName(rs.getString("name_qp"));
+                    return uidName;
                 }
             });
 
@@ -62,7 +65,7 @@ public class UserCache{
             userCache = new UserCache();
         }
         Long userMapTime = System.currentTimeMillis()-userCache.initTime;
-        if(userCache.userIdMap==null || userCache.userIdMap.isEmpty() || userMapTime > Config.USERCACHE_EXPIRE){
+        if(userCache.userIdMap==null || userCache.userIdMap.isEmpty() || userMapTime > USERCACHE_EXPIRE){
             userCache.init();
         }
         return userCache.userIdMap;
@@ -76,6 +79,8 @@ public class UserCache{
         private int adminId;
         private String userName;
         private String realName;
+        private String qPName;
+        private String jPName;
 
         public UidName() {
         }
@@ -108,6 +113,22 @@ public class UserCache{
 
         public void setRealName(String realName) {
             this.realName = realName;
+        }
+
+        public String getQPName() {
+            return qPName;
+        }
+
+        public void setQPName(String qPName) {
+            this.qPName = qPName;
+        }
+
+        public String getJPName() {
+            return jPName;
+        }
+
+        public void setJPName(String jPName) {
+            this.jPName = jPName;
         }
     }
 }

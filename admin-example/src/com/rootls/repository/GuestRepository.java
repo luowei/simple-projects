@@ -2,8 +2,6 @@ package com.rootls.repository;
 
 import com.rootls.bean.SearchBean;
 import com.rootls.model.Guest;
-import com.rootls.bean.SearchBean;
-import com.rootls.model.Guest;
 import org.apache.log4j.Logger;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;

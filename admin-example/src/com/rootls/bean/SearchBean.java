@@ -38,6 +38,7 @@ public class SearchBean implements Serializable {
     Integer receipttype;
     //跟踪人
     Integer trackId;
+    String trackStr;
     //邮寄地址
     String sendAddr;
     //    联系人
@@ -152,6 +153,18 @@ public class SearchBean implements Serializable {
         this.trackId = trackId;
     }
 
+    public String getTrackStr() {
+        return trackStr;
+    }
+
+    public void setTrackStr(String trackStr) {
+        int dotIdx = trackStr.indexOf(".");
+        if (dotIdx > 0) {
+            this.trackId = Integer.valueOf(trackStr.substring(0, dotIdx));
+        }
+        this.trackStr = trackStr;
+    }
+
     public String getSendAddr() {
         return sendAddr;
     }
@@ -225,7 +238,7 @@ public class SearchBean implements Serializable {
     }
 
     public Integer getLike() {
-        if (like ==null){
+        if (like == null) {
             return 0;
         }
         return like;

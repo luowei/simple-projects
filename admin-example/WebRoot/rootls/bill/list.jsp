@@ -13,26 +13,33 @@
     </NOSCRIPT>
     <meta http-equiv="Content-Language" content="zh-cn">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name=keywords content="XXXX商务专家">
-    <meta name="description" content="Design By www.rootls.com">
-    <title>XXXX商务专家系统-管理页面</title>
-    <link href="${ctx}/rootls/common/css/admin.css" rel="stylesheet" type="text/css">
-    <link type="text/css" rel="StyleSheet" href="${ctx}/rootls/common/css/sortabletable.css"/>
+    <meta name=keywords content="隆众商务,石化,专家">
+    <meta name="description" content="Design By www.oilchem.com">
+    <title>隆众商务专家系统-管理页面</title>
+    <link href="${ctx}/pcdb/common/css/admin.css" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="StyleSheet" href="${ctx}/pcdb/common/css/sortabletable.css"/>
 
-    <script type="text/javascript" src="${ctx}/rootls/common/js/datepicker/WdatePicker.js"></script>
-    <script type="text/javascript" src="${ctx}/rootls/common/js/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="${ctx}/pcdb/common/js/datepicker/WdatePicker.js"></script>
+    <%--<script type="text/javascript" src="${ctx}/rootls/common/js/jquery-1.7.2.js"></script>--%>
+           <script type="text/javascript">
+               var LzCharset="UTF-8";
+           </script>
+    <script type="text/javascript" src="http://exp.oilchem.net/js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="http://exp.oilchem.net/js/jquery.form.2.94.js"></script>
+    <script type="text/javascript" src="http://exp.oilchem.net/js/jquery.autocomplete.js"></script>
+
     <%--<script type="text/javascript" src="${ctx}/rootls/common/js/json2.min.js"></script>--%>
 
-    <link type="text/css" rel="StyleSheet" href="${ctx}/rootls/common/js/autocomplete2/jquery.autocomplete.css"/>
-    <script type="text/javascript" src="${ctx}/rootls/common/js/autocomplete2/jquery.autocomplete.js"></script>
+    <%--<link type="text/css" rel="StyleSheet" href="${ctx}/rootls/common/js/autocomplete2/jquery.autocomplete.css"/>--%>
+    <%--<script type="text/javascript" src="${ctx}/rootls/common/js/autocomplete2/jquery.autocomplete.js"></script>--%>
 
-    <script src="${ctx}/rootls/common/ajaxfileupload/ajaxfileupload.js"></script>
+    <script src="${ctx}/pcdb/common/ajaxfileupload/ajaxfileupload.js"></script>
     <%--<script src="${ctx}/rootls/common/ajaxfileupload/jquery.fileUploader.js"></script>--%>
     <%--<script src="http://malsup.github.com/jquery.form.js"></script>--%>
 
-    <link rel="stylesheet" type="text/css" href="${ctx}/rootls/common/window/styles/_Window.css"/>
-    <script src="${ctx}/rootls/common/window/styles/_Window.js"></script>
-    <script type="text/javascript" src="${ctx}/rootls/bill/bill.js"></script>
+    <link rel="stylesheet" type="text/css" href="${ctx}/pcdb/common/window/styles/_Window.css"/>
+    <script src="${ctx}/pcdb/common/window/styles/_Window.js"></script>
+    <script type="text/javascript" src="${ctx}/pcdb/bill/bill.js"></script>
 
 
     <script type="text/javascript">
@@ -40,7 +47,43 @@
 
         $(function () {
             getpage('${ctx}', url);
+
+            $("#trackStr").autocomplete("http://exp.oilchem.net/admin/admin_showadminname-utf-8.asp?sn=1", {
+                        minChars: 0,
+                        width: 260,
+                        max: 300,
+                        selectFirst: true,
+                        scroll: true,
+                        scrollHeight: 280,
+                        multiple: false,
+                        autoFill: false,
+                matchContains: true,
+                dataType: "json",
+                parse: function(data) {
+                    return $.map(data, function(row) {
+                        return {
+                            data: row,
+                            value: row.name,
+                            result: row.id + '.' +row.name.replace(/<\/?font[^>]*>/gi,"")
+                        }
+                    });
+                },
+                formatItem: function(item) {
+                    return format(item);
+                }
+            });
+
         });
+
+        function format(user) {
+            var colo = "";
+            if(user.id<=0){
+                colo = "red";
+            }else if(user.ds=="离职"){
+                colo = "gray";
+            }
+            return ((colo!="")?"<font color="+colo+">":"" )+ user.name + " (" + user.py + ")" + " (" + user.ds + ")" +( (colo!="")?"</font>":"");
+        }
 
     </script>
 </head>
@@ -70,7 +113,8 @@
                         <option value="4">正式过期</option>
                     </select>
                     <strong>跟踪人:</strong>
-                    <input type='text' id='trackId' name='trackId' size='20' onfocus="inputAutocomplete('${ctx}',this)">
+                    <%--<input type='text' id='trackId' name='trackId' size='20' onfocus="inputAutocomplete('${ctx}',this)">--%>
+                    <input type='text' id='trackStr' name='trackStr' size='20' >
 
                     <select name="sel" class="smallselsect" id="sel" onchange="changbind(this)">
                         <option value="qymc" selected>企业名称</option>
@@ -133,8 +177,8 @@
 
 <table align=center>
     <tr align=center>
-        <td width="100%" class=copyright>XXXX商务 , Copyright (c) 2005 <a href="http://www.rootls.com" target="_blank">
-            <font color=#708796><b>rootls<font color=#CC0000>.Net</font></b></font></a>. All Rights Reserved .
+        <td width="100%" class=copyright>隆众商务 , Copyright (c) 2005 <a href="http://www.oilchem.net" target="_blank">
+            <font color=#708796><b>oilchem<font color=#CC0000>.Net</font></b></font></a>. All Rights Reserved .
         </td>
     </tr>
 </table>

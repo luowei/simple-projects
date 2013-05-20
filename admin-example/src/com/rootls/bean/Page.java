@@ -21,7 +21,7 @@ public class Page<T> implements Serializable {
     Integer totalCount;
     String order;
     List<T> content = new ArrayList<T>();
-
+    Integer currentPage;
     public Page() {
     }
 
@@ -102,5 +102,13 @@ public class Page<T> implements Serializable {
         }
         return 0;
     }
+
+	public Integer getCurrentPage() {
+		return currentPage;
+	}
+
+	public void setCurrentPage(Integer currentPage) {
+		this.currentPage = currentPage;
+	}
 
 }

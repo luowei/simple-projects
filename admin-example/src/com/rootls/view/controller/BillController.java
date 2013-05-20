@@ -1,7 +1,5 @@
 package com.rootls.view.controller;
 
-import com.rootls.bean.Config;
-import com.rootls.bean.Page;
 import com.rootls.bean.Page;
 import com.rootls.bean.SearchBean;
 import com.rootls.model.Bill;
@@ -23,6 +21,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import static com.rootls.bean.Config.*;
 import static com.rootls.bean.UserCache.UidName;
 import static com.rootls.bean.UserCache.getUserMap;
 import static com.rootls.view.ExcelView.ExlBean;
@@ -53,13 +52,13 @@ public class BillController {
         return "bill/list";
     }
 
-    @ResponseBody @RequestMapping("/getuser")
+    @ResponseBody @RequestMapping(value = "/getuser")
     public List<String> getuser(){
 
         List<String> userList = new ArrayList<String>();
         for(Map.Entry<Integer,UidName> entry: getUserMap().entrySet()){
             UidName user = entry.getValue();
-             userList.add(user.getAdminId()+"-"+user.getUserName()+"-"+user.getRealName());
+             userList.add(user.getQPName()+"-"+user.getJPName()+"-"+user.getRealName());
         }
         return userList;
     }
@@ -71,13 +70,13 @@ public class BillController {
         return pg;
     }
 
-    @ResponseBody @RequestMapping("/updatejson")
+    @ResponseBody @RequestMapping(value = "/updatejson")
     public String updatejson(Model model,Bill bill){
-        Config.importLog.clear();
+        importLog.clear();
         try {
             billService.updateBill(bill);
         } catch (Exception e) {
-            Config.importLog.add(e.getMessage());
+            importLog.add(e.getMessage());
             logger.error(e.getMessage(),e);
             return "{\"code\":0}";
         }
@@ -87,7 +86,7 @@ public class BillController {
     @RequestMapping("/expExl")
     public ModelAndView expExl(Model model,SearchBean searchBean,Page page){
 
-        String sheetName = "发票_"+new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+        String sheetName = "HeTong_FaPiao_"+new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
         String excelName = sheetName + ".xls";
         List<ExlBean> exlBeanList = getBillExlBeanList();
 
@@ -100,7 +99,7 @@ public class BillController {
     @ResponseBody @RequestMapping("/impExl")
     public synchronized String impExl(MultipartFile file,RedirectAttributes redirectAttrs){
         //清空日志
-        Config.importLog.clear();
+        importLog.clear();
         //上传导入
         try {
             String uploadPath = billService.upload(file);
@@ -114,28 +113,28 @@ public class BillController {
 
     @ResponseBody @RequestMapping("/showlog")
     public List<String> showlog(){
-        return Config.importLog;
+        return importLog;
     }
 
 
     private List<ExlBean> getBillExlBeanList() {
         List<ExlBean> exlBeanList = new ArrayList<ExlBean>();
 
-        exlBeanList.add(new ExlBean(Config.EXL_NAME, "name"));
-        exlBeanList.add(new ExlBean(Config.EXL_HTBIANHAO, "htbianhao"));
-        exlBeanList.add(new ExlBean(Config.EXL_RECEIPTDATE, "receiptdate"));
-        exlBeanList.add(new ExlBean(Config.EXL_SHOURUXIANMU, "shouruxianmu"));
-        exlBeanList.add(new ExlBean(Config.EXL_RECEIPTSUM, "receiptsum"));
-        exlBeanList.add(new ExlBean(Config.EXL_RECEIPT, "receipt"));
-        exlBeanList.add(new ExlBean(Config.EXL_RECEIPTDZDATE, "receiptdzdate"));
-        exlBeanList.add(new ExlBean(Config.EXL_KUANXIANGLX, "kuanxianglxStr"));
-        exlBeanList.add(new ExlBean(Config.EXL_RECEIPTTYPE, "receipttypeStr"));
-        exlBeanList.add(new ExlBean(Config.EXL_SENDADDR, "sendAddr"));
-        exlBeanList.add(new ExlBean(Config.EXL_SENDLXR, "sendLxr"));
-        exlBeanList.add(new ExlBean(Config.EXL_SENDPHONE, "sendPhone"));
-        exlBeanList.add(new ExlBean(Config.EXL_SENDMOBILE, "sendMobile"));
-        exlBeanList.add(new ExlBean(Config.EXL_SENDTIME, "sendTime"));
-        exlBeanList.add(new ExlBean(Config.EXL_SENDCONTENT, "sendContent"));
+        exlBeanList.add(new ExlBean(EXL_NAME, "name"));
+        exlBeanList.add(new ExlBean(EXL_HTBIANHAO, "htbianhao"));
+        exlBeanList.add(new ExlBean(EXL_RECEIPTDATE, "receiptdate"));
+        exlBeanList.add(new ExlBean(EXL_SHOURUXIANMU, "shouruxianmu"));
+        exlBeanList.add(new ExlBean(EXL_RECEIPTSUM, "receiptsum"));
+        exlBeanList.add(new ExlBean(EXL_RECEIPT, "receipt"));
+        exlBeanList.add(new ExlBean(EXL_RECEIPTDZDATE, "receiptdzdate"));
+        exlBeanList.add(new ExlBean(EXL_KUANXIANGLX, "kuanxianglxStr"));
+        exlBeanList.add(new ExlBean(EXL_RECEIPTTYPE, "receipttypeStr"));
+        exlBeanList.add(new ExlBean(EXL_SENDADDR, "sendAddr"));
+        exlBeanList.add(new ExlBean(EXL_SENDLXR, "sendLxr"));
+        exlBeanList.add(new ExlBean(EXL_SENDPHONE, "sendPhone"));
+        exlBeanList.add(new ExlBean(EXL_SENDMOBILE, "sendMobile"));
+        exlBeanList.add(new ExlBean(EXL_SENDTIME, "sendTime"));
+        exlBeanList.add(new ExlBean(EXL_SENDCONTENT, "sendContent"));
         return exlBeanList;
     }
 

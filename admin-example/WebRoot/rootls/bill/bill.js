@@ -82,6 +82,7 @@ var billImport = function (ctx) {
             secureuri: false,
             fileElementId: 'importExcel',
             dataType: 'json',
+            cache: false,
             success: function (data, status) {
                 if(data.code==1){
                     alert("导入完成!")
@@ -105,6 +106,7 @@ var showlog = function(geturl){
     $.ajax({
         url: geturl,
         dataType: "json",
+        cache: false,
         success: function (logs) {
             $.each(logs, function (i, log) {
                 content = content+log+"<br/>"
@@ -269,14 +271,16 @@ var billedit = function (id,ctx) {
  */
 var updatebill = function(url,ctx){
 
-    var postData = $('.FORM').serialize()
-//    var getUrl = encodeURI(url+"?"+postData)
-//    alert($('.FORM').serialize())
-
+//    var postData = $('.FORM').serialize()
+    var postData=$('.FORM').formSerialize();
     $.ajax({
-        url: url+"?"+postData,
-//        data: postData,
+//        url: url+'?'+postData,
+        url: url,
+        type:"POST",
+        data: postData,
+        contentType: "application/x-www-form-urlencoded;charset=UTF-8",
         dataType: "json",
+        cache: false,
         success: function(data){
             if(data.code==1){
              alert('更新成功')
@@ -361,6 +365,7 @@ var getpage = function (ctx, geturl) {
     $.ajax({
         url: geturl,
         dataType: "json",
+        cache: false,
         success: function (page) {
             appendtbody(page,ctx);
             pagebar(page, ctx);
@@ -386,6 +391,7 @@ function getuser(ctx, handle) {
     $.ajax({
         url: ctx + "/bill/getuser.lz",
         dataType: "json",
+        cache: false,
         success: function (data) {
             handle(data);
         }

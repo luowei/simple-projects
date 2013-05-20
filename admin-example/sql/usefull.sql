@@ -111,6 +111,6 @@ guestbook_ht_receipt.send_mobile as sendmobile,
 guestbook_ht_receipt.send_time as sendtime,
 guestbook_ht_receipt.send_content as sendcontent
 from guestbook,guestbook_ht,guestbook_ht_receipt
-where guestbook_ht_receipt.sid = guestbook_ht.sid
+where guestbook_ht_receipt.htbianhao = guestbook_ht.htbianhao
 and  guestbook_ht_receipt.gid = guestbook.id
 

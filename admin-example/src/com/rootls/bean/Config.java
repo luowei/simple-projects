@@ -31,7 +31,7 @@ public class Config {
     public static String UPLOAD_PATH = "d:/upload/upload/admin/bill";
 
     //页面大小
-    public static Integer PAGE_SIZE = 1;
+    public static Integer PAGE_SIZE = 20;
     //usercache缓存时间
     public static Long USERCACHE_EXPIRE = 24 * 3600 * 1000L;
 

@@ -2,6 +2,8 @@ package com.rootls.repository;
 
 import com.rootls.model.Bill;
 import com.rootls.model.LinkMan;
+import org.springframework.jdbc.core.ResultSetExtractor;
+import org.springframework.jdbc.core.RowCallbackHandler;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 

@@ -21,4 +21,41 @@
         <property name="password" value="${pcdb.jdbc.password}" />
     </bean>
 
+	
+	<!-- IBATIS配置 START -->	
+	<import resource="/com/oilchem/ibatis/config/ibatisconfig.xml"/>
+	<!-- IBATIS配置 END -->	
+	
+	<!-- 权限查询 -->
+	<import resource="/com/oilchem/config/purview/PurviewBean.xml"/>
+	<!-- 信息源 -->
+	<import resource="/com/oilchem/config/informationsources/InformationSourcesBean.xml"/>
+	<!-- 浏览统计 -->
+	<import resource="/com/oilchem/config/statistics/StatisticsBean.xml"/>
+	<!-- 日程提醒 -->
+	<import resource="/com/oilchem/config/program/ProgramRemindBean.xml"/>
+	<!-- 产品目录管理 -->
+	<import resource="/com/oilchem/config/productclass/ProductClassBean.xml"/>
+	<!-- 栏目分类管理 -->
+	<import resource="/com/oilchem/config/plmclass/PlmClassBean.xml"/>
+	<!-- 在线列表 -->
+	<import resource="/com/oilchem/config/online/OnlineListBean.xml" />
+	<!-- 信息列表 -->
+	<!--import resource="/com/oilchem/config/information/InformationBean.xml" /-->
+	<!-- 新闻关键词 -->
+	<import resource="/com/oilchem/config/newskey/NewskeyBean.xml" />
+	<!-- 广告图片管理 -->
+	<import resource="/com/oilchem/config/adimg/AdImgManageBean.xml" />
+	<!-- 广告位置管理 -->
+	<import resource="/com/oilchem/config/lzwebclass/LzWebClassBean.xml" />
+	<!--  -->
+	<!--import resource="/com/oilchem/config/tools/EWebEditorBean.xml" /-->
+	<!-- 套餐管理 -->
+	<import resource="/com/oilchem/config/sale/saleBean.xml" />
+	<!-- 浏览记录 -->
+	<import resource="/com/oilchem/config/viewRecord/viewRecordBean.xml" />
+	
+	<import resource="/com/oilchem/config/tariff/TariffBean.xml" />
+	<import resource="/com/oilchem/config/htfj/htfjBean.xml" />
+	
 </beans>

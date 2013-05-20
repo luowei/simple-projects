@@ -1,6 +1,5 @@
 package com.rootls.model;
 
-import com.rootls.bean.UserCache;
 import org.codehaus.jackson.annotate.JsonIgnore;
 
 import java.io.Serializable;
@@ -345,7 +344,7 @@ public class Bill implements Serializable {
     }
 
     public String getTrackname() {
-        UserCache.UidName user = UserCache.getUserMap().get(trackId);
+        UidName user = getUserMap().get(trackId);
         if(user==null){
             return null;
         }
@@ -368,7 +367,7 @@ public class Bill implements Serializable {
 
     @JsonIgnore
     public Guest getGuest() {
-        UserCache.UidName user = UserCache.getUserMap().get(trackId);
+        UidName user = getUserMap().get(trackId);
         if(user==null){
             return guest;
         }

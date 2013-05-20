@@ -1,13 +1,9 @@
 package com.rootls.service.impl;
 
-import com.rootls.bean.*;
-import com.rootls.model.Contract;
-import com.rootls.model.Guest;
-import com.rootls.repository.BillRepository;
-import com.rootls.repository.LinkmanRepository;
 import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
+import com.rootls.bean.*;
 import com.rootls.model.Bill;
 import com.rootls.model.Contract;
 import com.rootls.model.Guest;
@@ -73,7 +69,7 @@ public class BillServiceImpl implements BillService {
 
     @Override
     public String upload(MultipartFile file) {
-        return UploadUtil.upload(file, Config.UPLOAD_PATH);
+        return UploadUtil.upload(file, UPLOAD_PATH);
     }
 
     @Override
@@ -94,7 +90,7 @@ public class BillServiceImpl implements BillService {
                     Bill bill = new BillExlMapper(rowIdx, new Bill(), sheet).getMappingInstance();
                     save(rowIdx+1, bill);
                 } catch (Exception e) {
-                    Config.importLog.add(e.getMessage());
+                    importLog.add(e.getMessage());
                     logger.info(e.getMessage());
                 }
 
@@ -410,10 +406,10 @@ public class BillServiceImpl implements BillService {
             whereSql.append(" and receipttype=" + receipttype.intValue());
         }
         if (isNotBlank(startreceiptdate)) {
-            whereSql.append(" and CONVERT(CHAR(10), startreceiptdate, 23)>='" + startreceiptdate.trim() + "' ");
+            whereSql.append(" and CONVERT(CHAR(10), receiptdate, 23)>='" + startreceiptdate.trim() + "' ");
         }
         if (isNotBlank(endreceiptdate)) {
-            whereSql.append(" and CONVERT(CHAR(10), endreceiptdate, 23)<'" + endreceiptdate.trim() + "' ");
+            whereSql.append(" and CONVERT(CHAR(10), receiptdate, 23)<'" + endreceiptdate.trim() + "' ");
         }
         if (trackId != null) {
             whereSql.append(" and trackId= " + trackId.intValue());

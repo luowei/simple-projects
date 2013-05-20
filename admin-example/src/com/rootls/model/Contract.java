@@ -1,5 +1,7 @@
 package com.rootls.model;
 
+import org.apache.commons.lang.StringUtils;
+
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;

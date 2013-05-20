@@ -6,6 +6,7 @@ import com.rootls.model.Bill;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import static com.rootls.bean.Config.*;
 import static org.apache.commons.lang.StringUtils.isBlank;
 
 /**

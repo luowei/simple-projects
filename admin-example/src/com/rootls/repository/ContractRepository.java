@@ -1,7 +1,6 @@
 package com.rootls.repository;
 
 import com.rootls.model.Contract;
-import com.rootls.model.Contract;
 import org.apache.log4j.Logger;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
