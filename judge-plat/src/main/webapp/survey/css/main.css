@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+html{overflow-x:auto;overflow-y:scroll}
+body{margin:0px;padding:0px;text-align:center;font-size:12px;font-family:Helvetica,Tahoma, Arial, sans-serif;color:#333;background-color:#fff;word-wrap:break-word;overflow:hidden}
+body > div{margin-right:auto;margin-left:auto}
+img,a img{border:0px}
+input,select,textarea{font-size:14px}
+br{font-size:12px}
+div{padding:0px;height:auto;text-align:left}
+p,dl,dt,dd,textarea,address,blockquote{margin:0px;padding:0px;height:auto;text-align:left}
+form,input,select,textarea,h1,h2,h3,h4,h5,h6{margin:0px;padding:0px}
+ul,li{margin:0px;padding:0px;height:auto;text-align:left;list-style:none}
+em,var,cite{font-style:normal}
+var{font-family:Verdana,Arial}
+a{color:#333;text-decoration:none}
+a:hover{text-decoration:underline}
+.ul li,.ul li p,.dl dt{white-space:nowrap;overflow:hidden}
+.l{float:left}
+.r{float:right}
+.clear{clear:both}
+.mart{margin-top:20px}
+
+/*bottom*/
+.bottom .pub_footerall dl dd{text-align:center}
+.bottom .pub_footerall{border-top:none}
+/*bottom*/
+
+.top,.bottom{width:1000px}
+
+.container{background:#fef9f5;width:1000px;padding-bottom:31px;line-height:24px}
+.container .intro{background:height:135px;margin:20px 0 0 0 ;padding:20px 30px 20px;background:#f2f2f2;}
+.container .nr{background:#fff;margin:10px 30px ;padding:10px 30px;}
+.container .nr .active{background:#f2f2f2;margin-top:20px;overflow:hidden;zoom:1}
+.container .nr .active img{float:right;}
+.container .nr .active ul{margin-top:20px;margin-left:20px;padding-bottom:20px;line-height:30px}
+.container .nr .active ul li strong{font-size:14px;color:#cc3300}
+.container .nr .active ul li em{font-weight:bold}
+
+/*form*/
+.exam_center{height:auot;padding:20px 0px;text-align:left;color:#333333}
+.exam_center div{font-size:12px;font-weight:normal}
+.exam_center h4{font-size:14px;font-weight:bold;margin:5px 0px}
+.exam_center h4 dfn{ display:inline-block;width:20px;color:#cb3400}
+.exam_center ul li{padding-left:40px;line-height:26px}
+.exam_center ul li input{margin-right:5px}
+.exam_textsubmit{color:#c31900}
+.exam_text{color:#333333}
+.exam_submits{margin:0px auto;width:600px;text-align:center;font-size:15px;font-weight:bold}
+
+.btn_tj{margin-left:40px}
+/*form*/
+
+.prize { height: 150px;  padding: 20px 40px 0 30px; font-size:14px}
+.prize b { font-weight: bold; color: #d7574c; line-height: 26px; }
+.checkarea { width: 850px; height: 125px; border: 1px #999 solid; overflow: scroll; }
+.username { width: 170px; height: 24px; border: 1px #999 solid; line-height: 24px; background: #fff; margin-right: 20px; }
+.mobile { width: 170px; height: 24px; border: 1px #999 solid; line-height: 24px; background: #fff; margin-right: 20px; }
+.address { width: 600px; height: 24px; border: 1px #999 solid; line-height: 24px; background: #fff; margin-right: 20px; }
+.sendbutton { width: 231px; height: 60px; border: 0; }
